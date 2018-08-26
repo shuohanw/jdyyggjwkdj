@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>病员管理</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/patient_management.css">
+</head>
+<body>
+<div class="page">
+    <iframe frameboder="0" scrolling="no" width="100%" height="240" src="header.html"></iframe>
+    <iframe frameboder="0" scrolling="no" width="100%" height="800" src="left.html"></iframe>
+    <div class="right_ce">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <ul>
+                    <li>
+                     <span> 姓名：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input" />
+                    </li>
+                    <li>
+                        <span>性别：</span><input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </li>
+                    <li>
+                      <span>主管医生：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </li>
+                    <li>
+                        <span>病历号：</span><input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                    </li>
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">查 询</button>
+                </ul>
+            </div>
+        </form>
+        <div class="delete">
+            <i class='iconfont icon-shanchu' ></i><span>批量删除</span>
+        </div>
+        <table class="layui-table" lay-data="{width: 1500, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
+            <thead>
+            <tr>
+                <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+                <th lay-data="{field:'id',  fixed: true}">序号</th>
+                <th lay-data="{field:'username', sort: true}">姓名</th>
+                <th lay-data="{field:'sex',  }">性别</th>
+                <th lay-data="{field:'city', }">年龄</th>
+                <th lay-data="{field:'sign', }">床号</th>
+                <th lay-data="{field:'experience',}">病例号</th>
+                <th lay-data="{field:'experience',   sort: true}">住院日期</th>
+                <th lay-data="{field:'classify', }">诊断</th>
+                <th lay-data="{field:'wealth', sort: true}">手术日期</th>
+                <th lay-data="{field:'score',  sort: true,}">主管医生</th>
+                <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"> 操作 </th>
+            </tr>
+            </thead>
+        </table>
+
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+
+
+    </div>
+
+</div>
+
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        //监听表格复选框选择
+        table.on('checkbox(demo)', function(obj){
+            console.log(obj)
+        });
+        //监听工具条
+        table.on('tool(demo)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'detail'){
+                layer.msg('ID：'+ data.id + ' 的查看操作');
+            } else if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+                layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            }
+        });
+
+        var $ = layui.$, active = {
+            getCheckData: function(){ //获取选中数据
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+            }
+            ,getCheckLength: function(){ //获取选中数目
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.msg('选中了：'+ data.length + ' 个');
+            }
+            ,isAll: function(){ //验证是否全选
+                var checkStatus = table.checkStatus('idTest');
+                layer.msg(checkStatus.isAll ? '全选': '未全选')
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+</body>
+</html>

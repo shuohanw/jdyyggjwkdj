@@ -1,0 +1,88 @@
+*{
+	padding: 0;
+	margin:0;
+	
+}
+
+.back{
+   	background: url(../images/back.png)  no-repeat #000;
+   	background-position: center top;
+   	background-size: 100% 100%;
+   	min-width: 1200px;
+   	min-height: 974px;
+    	position: relative;
+}
+.box{
+	width: 30%;
+	height: 40%;
+	position: absolute;
+	top: 44%;
+	left: 52%;
+	margin-left: -15%;
+}
+.username{
+	width: 80%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	margin-top: 60px;
+	color: #fff;
+}
+.username input{
+	width: 70%;
+	height: 25px;
+	line-height: 25px;
+
+}
+.password{
+	width: 80%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	color:#fff;
+}
+.password input{
+	width: 70%;
+	height: 25px;
+	line-height: 25px;
+	margin-left:2px;
+}
+.choose{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	color: #fff;
+}
+.choose span{
+	margin-left: 20%;
+}
+.buttonbox{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+}
+.buttonbox span{
+	display: inline-block;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 10px;
+	color: #fff;
+	background: linear-gradient(#2174a3, #14425c);
+	border:1px solid  #14425c;
+}
+.buttonbox span:hover{
+	background: linear-gradient(#14425c, #2174a3);
+	border:1px solid  #14425c;
+	cursor: pointer;
+}
+.login{
+	margin-left: 20%;
+}
+.reset{
+	margin-left: 15%;
+}

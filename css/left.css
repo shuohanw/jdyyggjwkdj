@@ -1,0 +1,19 @@
+ul, menu, dir {display: block;list-style-type: disc;-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;}
+i.iconfont {
+    font-size: 30px;}
+.layui-neirong{width: 98%;margin:10px auto;}
+.layui-neirong-container{width: 14%;background-color: #3465cb;}
+.layui-ui{width: 100%;padding: 10px 0;}
+.layui-neirong-container li{width: 100%;padding: 15px 20px;color: white;font-size: 1.1em;list-style: none;}
+.layui-neirong-container li i{margin-left: 5%;}
+.layui-neirong-container li span{margin-left: 8%;}
+.layui-neirong-container li:active{color: #fff600;}
+.layui-neirong-container li:hover{color: #fff600;}
+@media screen and (max-width: 1199px) and (min-width: 769px){
+    .layui-neirong-container li{font-size: 0.7em;}
+    .layui-neirong-container li i{margin-left: 1%;}
+    .layui-neirong-container li span{margin-left: 5%;}
+    i.iconfont {
+        font-size: 16px;}  }
