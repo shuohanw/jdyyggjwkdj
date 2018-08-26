@@ -9,17 +9,14 @@ iframe {border-width: 0;border-style: inset;border-color: initial;border-image: 
 input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
 .layui-input-block{float: right;margin-top: -80px;}
 .anmiu{float: right;margin-top: -40px;}
-/*
-table{width: 100%;}
-.one{
-    border-collapse: separate;
-    border-spacing: 0px 10px
-     }
-tr{margin-top: 20px;}
-th,td{width: 9%;border-right:1px solid #a7a7a7;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 16px;}
-th{background-color: #3465cb; }
-td{background-color:#f6f4f4;color: #3465cb;border-collapse:collapse;}
-*/
+.layui-layer {
+    -webkit-overflow-scrolling: touch;top: 150px;
+    left: 0;margin: 0;padding: 0;background-color: #fff;
+    -webkit-background-clip: content;border-radius: 2px;
+    box-shadow: 1px 1px 50px rgba(0,0,0,.3);width: 500px;}
+.li_text{width: 285px;height: 30px;line-height: 30px;margin-top: 10px;}
+.li_text span{float: left;font-size: 16px;text-align: center;}
+.li_text input{width: 200px;float: right;}
 .fuxuan{width: 15px;height: 15px;margin-top: 10px;cursor: pointer;}
 @media screen and (max-width: 1800px) and (min-width: 1200px)
 {.layui-form-item li span{font-size: 0.9em;width: 40%;}
