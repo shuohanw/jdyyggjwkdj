@@ -6,6 +6,8 @@ iframe {border-width: 0;border-style: inset;border-color: initial;border-image: 
 .layui-input{height: 30px;line-height:30px;width: 50%;border:1px solid #3465cb; }
 .layui-btn {height: 25px;line-height: 25px;background-color: #3465cb;color: #fff;white-space: nowrap;text-align: center;font-size: 14px;
     border: none;cursor: pointer;}
+.layui-table th{
+    background-color: #3465cb;color: white;text-align: center;font-size: 1.2em;}
 input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
 .layui-input-block{float: right;margin-top: -80px;}
 .anmiu{float: right;margin-top: -40px;}
@@ -15,9 +17,19 @@ input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
     -webkit-background-clip: content;border-radius: 2px;
     box-shadow: 1px 1px 50px rgba(0,0,0,.3);width: 500px;}
 .li_text{width: 285px;height: 30px;line-height: 30px;margin-top: 10px;}
+.layui-layer-title {
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid ;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    background-color: #3465cb;
+    border-radius: 2px 2px 0 0;
+}
 .li_text span{float: left;font-size: 16px;text-align: center;}
 .li_text input{width: 200px;float: right;}
-.fuxuan{width: 15px;height: 15px;margin-top: 10px;cursor: pointer;}
 @media screen and (max-width: 1800px) and (min-width: 1200px)
 {.layui-form-item li span{font-size: 0.9em;width: 40%;}
     .layui-form-item li{width:20%;}}

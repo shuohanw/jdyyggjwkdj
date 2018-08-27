@@ -5,7 +5,8 @@ iframe {border-width: 0;border-style: inset;border-color: initial;border-image: 
 .layui-form-item li{width:22%;color:#3465cb; display: inline-block;}
 .layui-form-item li span{float:left; font-size: 1.1em;text-align: center;height: 20px;line-height: 20px;padding-top: 5px;width: 30%;}
 .layui-input{height: 25px;width: 70%;border:1px solid #3465cb;float: right;}
-.layui-table td, .layui-table th{
+.layui-table td,
+.layui-table th{
    background-color: #3465cb;color: white;text-align: center;font-size: 1.2em;border: none;}
 .layui-btn {height: 25px;line-height: 25px;border-radius: 5px;background-color: #3465cb;
     color: #fff;white-space: nowrap;text-align: center;font-size: 14px;border: none;margin-top: -20px;
