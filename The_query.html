@@ -54,34 +54,35 @@
                 </ul>
             </div>
         </form>
-        <table class="layui-table" lay-data="{width: 1500, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
-            <thead>
-            <tr>
-                <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
-                <th lay-data="{field:'id',  fixed: true}">序号</th>
-                <th lay-data="{field:'username', sort: true}">姓名</th>
-                <th lay-data="{field:'sex',  }">性别</th>
-                <th lay-data="{field:'city', }">年龄</th>
-                <th lay-data="{field:'sign', }">床号</th>
-                <th lay-data="{field:'experience',}">病例号</th>
-                <th lay-data="{field:'experience',   sort: true}">住院日期</th>
-                <th lay-data="{field:'classify', }">诊断</th>
-                <th lay-data="{field:'wealth', sort: true}">手术日期</th>
-                <th lay-data="{field:'score',  sort: true,}">主管医生</th>
-                <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"> 操作 </th>
-            </tr>
-            </thead>
-        </table>
+        <div class="biaoge">
+            <table class="layui-table" lay-data="{width: 1350, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
+                <thead>
+                <tr>
+                    <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+                    <th lay-data="{field:'id',width:117,}">序号</th>
+                    <th lay-data="{field:'username',width:117, sort: true}">姓名</th>
+                    <th lay-data="{field:'sex',width:118 }">性别</th>
+                    <th lay-data="{field:'city',width:118 }">年龄</th>
+                    <th lay-data="{field:'sign',width:118}">床号</th>
+                    <th lay-data="{field:'experience',width:118}">病例号</th>
+                    <th lay-data="{field:'experience',width:118   sort: true}">住院日期</th>
+                    <th lay-data="{field:'classify',width:118 }">诊断</th>
+                    <th lay-data="{field:'wealth',width:118, sort: true}">手术日期</th>
+                    <th lay-data="{field:'score',width:118,  sort: true,}">主管医生</th>
+                    <th lay-data="{fixed: 'right',align:'center', toolbar: '#barDemo'}"> 操作 </th>
+                </tr>
+                </thead>
+            </table>
 
-        <script type="text/html" id="barDemo">
-            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-        </script>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+
+
+        </div>
     </div>
-
-
-
 </div>
 
 <script src="./layui/layui.js"></script>

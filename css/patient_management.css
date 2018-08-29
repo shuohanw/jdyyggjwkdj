@@ -3,22 +3,15 @@ iframe {border-width: 0;border-style: inset;border-color: initial;border-image: 
 .right_ce{width: 80%; position: absolute;margin-left: 18%;margin-top: -780px;}
 .layui-form-item{width: 90%;padding: 20px 10px;}
 .layui-form-item li{width:22%;color:#3465cb; display: inline-block;}
-.layui-form-item li span{float:left; font-size: 1.1em;text-align: center;height: 20px;line-height: 20px;padding-top: 5px;width: 30%;}
-.layui-input{height: 25px;width: 70%;border:1px solid #3465cb;float: right;}
-.layui-table td,
-.layui-table th{
-   background-color: #3465cb;color: white;text-align: center;font-size: 1.2em;border: none;}
+.layui-form-item li span{ font-size: 1.1em;text-align: center;height: 20px;line-height: 20px;padding-top: 5px;}
+.layui-input{height: 25px;width: 70%;border:1px solid #3465cb;display: inline-block;}
 .layui-btn {height: 25px;line-height: 25px;border-radius: 5px;background-color: #3465cb;
     color: #fff;white-space: nowrap;text-align: center;font-size: 14px;border: none;margin-top: -20px;
     cursor: pointer;}
 .delete{color: red;font-size: 20px;}
 .delete i{font-size: 30px;}
-.layui-table-view .layui-table {width:100%;margin: 0;}
-.layui-table-cell {
-    padding: 0 0 ;position: relative;overflow: hidden;
-    text-overflow: ellipsis;white-space: nowrap;box-sizing: border-box;}
-.layui-table th {
-     padding: 2px 0;border-top: none;border-left: none;}
+.layui-table th{
+    background-color: #3465cb;color: white;text-align: center;font-size: 1.2em;}
 @media screen and (max-width: 1700px) and (min-width: 1200px)
 {.layui-form-item li span{font-size: 0.8em;width: 40%;text-align: center;} .layui-form-item li{width:20%;}
 

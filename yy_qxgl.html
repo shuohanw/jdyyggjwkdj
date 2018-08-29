@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>权限管理</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/yy_qxgl.css">
+</head>
+<body>
+<div class="page">
+    <iframe frameboder="0" scrolling="no" width="100%" height="240" src="header.html"></iframe>
+    <iframe frameboder="0" scrolling="no" width="100%" height="800" src="left.html"></iframe>
+    <div class="right_ce">
+        <div class="right_container">
+            <ul>
+                <li>
+                    <div class="instructions">
+                        <span class="personnel">人员 ：</span>
+                        <select name="interest" lay-filter="aihao">
+                            <option value="" selected=""></option>
+                        </select>
+                        <button type="button" class="increase">编 辑</button>
+                        <button type="button" class="delete">保 存</button>
+                    </div>
+                </li>
+            </ul>
+            <table class="layui-table" lay-data="{width: 1000, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
+                   <thead>
+                   <tr>
+                       <th lay-data="{type:'checkbox',width:100, fixed: 'left'}"></th>
+                       <th lay-data="{field:'id', width:100, fixed: true}">序号</th>
+                       <th lay-data="{field:'username',width:400,}">功能</th>
+                       <th lay-data="{field:'sex', width:150, }">排序</th>
+                       <th lay-data="{field:'city',width:250, }">操作</th>
+                   </tr>
+                   </thead>
+               </table>
+            <table class="layui-hide" id="test"></table>
+        </div>
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        //监听表格复选框选择
+        table.on('checkbox(demo)', function(obj){
+            console.log(obj)
+        });
+        //监听工具条
+        table.on('tool(demo)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'detail'){
+                layer.msg('ID：'+ data.id + ' 的查看操作');
+            } else if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+                layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            }
+        });
+
+        var $ = layui.$, active = {
+            getCheckData: function(){ //获取选中数据
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+            }
+            ,getCheckLength: function(){ //获取选中数目
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.msg('选中了：'+ data.length + ' 个');
+            }
+            ,isAll: function(){ //验证是否全选
+                var checkStatus = table.checkStatus('idTest');
+                layer.msg(checkStatus.isAll ? '全选': '未全选')
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+</body>
+</html>

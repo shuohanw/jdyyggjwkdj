@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>全髋调查</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="css/yy_qkdc1.css">
+</head>
+<body>
+<div class="page">
+    <iframe frameboder="0" scrolling="no" width="100%" height="240" src="header.html"></iframe>
+    <iframe frameboder="0" scrolling="no" width="100%" height="800" src="left.html"></iframe>
+    <div class="right_ce">
+        <div class="paging">
+            <ul>
+                <li class="paging_contion">
+                    <span class="tite"><a href="#diyiye" onclick="doList();">第一页</a> </span>
+                    <span class="tite"><a href="#dierye"  onclick="goList();">第二页</a></span>
+                    <span class="tite"><a href=""  onclick="">第三页</a></span>
+                    <span class="tite"><a href=""  onclick="">第四页</a></span>
+                </li>
+            </ul>
+        </div>
+        <div id="diyiye">
+            <div class="Total_hip" style="clear: both;" >
+                <p>全髋关节置换术</p>
+                <div class="card_box">
+                    <div class="card_box1">
+                        <ul>
+                            <li>
+                                <span>姓名 ：刘天厚</span>
+                            </li>
+                            <li>
+                                <span>性别 ： </span>
+                                   <input type="checkbox" name="ice" onclick="checkIt(this)" class="yi"/>
+                                    <label class="nan">  男</label>
+                                    <label class="nv">女</label>
+                                    <input type="checkbox" name="ice" onclick="checkIt(this)" class="er"/>
+                                    <span style="margin-left:12%;">年龄 ：25</span>
+                            </li>
+                            <li>
+                                <span>
+                                    联系电话 ：13278441752
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    地址 ：吉林省伊通县景和镇
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="hospital_box">
+                  <div class="neirong">
+                      <span >住院号</span>
+                      <span >11026039</span>
+                  </div>
+                    <div class="neirong">
+                        <span>研究序号</span>
+                        <span> </span>
+                    </div>
+                    <div class="neirong1">
+                        <span>研究序号</span>
+                        <div class="rq"> 日 期
+                            <b style="margin-left: 20px;"> 2012 / 06 /19</b>
+                        </div>
+                    </div>
+                    <ul style="padding: 2px 5px;">
+                        <li>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" class="fu1" />
+                            <label class="zou">左</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" class="fu2"/>
+                            <label class="nv">右</label>
+                            <label class="zou1">股骨头缺血行坏死</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                            <label class="you1"> 股性关节炎</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                        </li>
+                        <li>
+                            <label> 类风湿关节炎</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            <label class="you2"> 股性关节</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                        </li>
+                        <li>
+                            <label >初次</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                            <label class="zuo2"> 翻修</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            <label class="you2"> 更换部分组件</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                        </li>
+                        <li>
+                            <label >杯臼型号</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                            <label class="zuo2"> 股骨头型号</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            <label class="you2"> 股骨柄型号</label>
+                            <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                        </li>
+                        <li>
+                            <label >医生</label>
+                            <label style="margin-left: 10%;">齐欣</label>
+                        </li>
+                        <li>
+                            <label >假体品牌</label>
+                            <div class="kuang"></div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div  style="clear: both;width: 100%;">
+                <p>术前及围手术期手术资料</p>
+                <table class=" bottom">
+                    <tbody>
+                    <tr style="height: 30px;">
+                        <td class="diyi">
+                            <span>侧</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zou">左 /右</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>主要诊断</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label class="wenzi">关节炎</label>
+                                <label >骨性关节炎</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 类风湿</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 强脊</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 幼年特发性关节炎</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2">骨性关节炎</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">骨坏死</label>
+                                <label >药物性</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 酒精性</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 创伤性</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 自发性</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">常见病因</label>
+                                <label >陈旧性结核</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 急性骨折</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 发育不良</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>翻修指征</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label class="wenzi">松动</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you3"> 无菌性松动</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 低毒性感染</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">聚乙烯磨损</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you3"> 骨溶解</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 无骨溶解</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">深部感染</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you3"> 一期</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 二期</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label>其他</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>术前髋关节情况/治疗</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label class="wenzi">骨折</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">感染</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                            <li>
+                                <label class="wenzi">置换</label>
+                                <label >是</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 否</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                            <li>
+                                <label>其他</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>其他关节</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label class="wenzi">双侧髋关节</label>
+                                <label >无病灶</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 有病灶但无病状</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 有症状</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi"></label>
+                                <label >已经置换</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 准备置换</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 不想置换</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">其他</label>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>其他信息</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label> 身高 </label>
+                                <label > 160 </label>
+                                <label > cm </label>
+                                <label class="zuo2"> 其他疾病</label>
+                            </li>
+                            <li>
+                                <label> 体重 </label>
+                                <label > 60 </label>
+                                <label > kg </label>
+                                <label class="zuo2"> 职业</label>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>病人分析</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label>A</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo3">单侧髋受累，无其他影响走路的疾病</label>
+                            </li>
+                            <li>
+                                <label>B</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo3">双侧髋受累，无其他影响走路的疾病</label>
+                            </li>
+                            <li>
+                                <label>C</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo3">身体一般问题影响走路</label>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>手术</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label> 日期 </label>
+                                <label class="zuo2"> 2012 年 6 月 11 日</label>
+                            </li>
+                            <li>
+                                <label> 手术医生：</label>
+                                <label class="zuo2"> 齐欣 </label>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <div style="width: 60px;color: #3465cb;text-align: left;padding-left: 5px;">
+                                <h3>体位 & </h3>
+                                <h3>入路</h3>
+                            </div>
+
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label >侧卧</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 仰卧</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 其他</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                            <li>
+
+                                <label >后侧</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 经臀肌入路</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2"> 转子间截骨</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 前侧</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2">联合</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="you2">其他</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <div style="width: 80px;color: #3465cb;text-align: left;padding-left: 5px;">
+                                <h3>翻修手术 </h3>
+                                <h3>术中所见</h3>
+                            </div>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label class="wenzi">瘢痕</label>
+                                <label >微小</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 正常</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 严重</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">臼杯</label>
+                                <label >完整</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 聚乙烯磨损</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 松动</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 严重松动</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">股骨头</label>
+                                <label >完整</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 磨损</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">股骨柄</label>
+                                <label >完整</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 松动</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 严重松动</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                            <li>
+                                <label class="wenzi">股溶解</label>
+                                <label >无</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 轻度</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 重度</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>假体植入</span>
+                        </td>
+                        <td class="dier">
+
+                            <li>
+                                <label class="wenzi">臼杯
+                                    <label >50</label>
+                                </label>
+                                <label class="zuo2">水泥型</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 生物型</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                            <li>
+                                <label class="wenzi">股骨柄
+                                    <label >11</label>
+                                </label>
+                                <label class="zuo2">水泥型</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 生物型</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diyi">
+                            <span>关节界面</span>
+                        </td>
+                        <td class="dier">
+                            <li>
+                                <label> 球头直径 </label>
+                                <label class="zuo2"> 28 </label>
+                                <label class="zuo2"> mm </label>
+                            </li>
+                            <li>
+                                <label> 颈长 </label>
+                                <label class="zuo2"> 减 </label>
+                                <label class="zuo2"> mm </label>
+                                <label class="zuo2"> 标准</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 加 </label>
+                                <label class="zuo2"> mm </label>
+                            </li>
+                            <li>
+                                <label>材料</label>
+                                <label class="zuo2" >金属对聚乙烯</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)"  />
+                                <label class="zuo2"> 氧化锆对聚乙烯</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                                <label class="zuo2"> 金属对金属</label>
+                                <input type="checkbox" name="ice" onclick="checkIt(this)" />
+                            </li>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="dierye" >
+            <div>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="diyi">jkmhg</td>
+                        <td class="dier"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./layui/layui.js"></script>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+    function doList(){
+         $('#diyiye').show();
+        $('#dierye').hide();
+
+    }
+    function goList(){
+        $('#diyiye').hide();
+        $('#dierye').show();
+
+    }
+
+    var lastCheck = null;
+    function checkIt( e )
+    {
+        if( lastCheck != null )
+            lastCheck.checked = false;
+        lastCheck = e;
+    }
+
+</script>
+</body>
+</html>

@@ -6,6 +6,7 @@ iframe {border-width: 0;border-style: inset;border-color: initial;border-image: 
 .layui-input{height: 30px;line-height:30px;width: 50%;border:1px solid #3465cb; }
 .layui-btn {height: 25px;line-height: 25px;background-color: #3465cb;color: #fff;white-space: nowrap;text-align: center;font-size: 14px;
     border: none;cursor: pointer;}
+.biaoge{width: 100%;}
 .layui-table th{
     background-color: #3465cb;color: white;text-align: center;font-size: 1.2em;}
 input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
@@ -35,3 +36,6 @@ input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
     .layui-form-item li{width:20%;}}
 @media screen and (max-width: 1199px) and (min-width: 769px)
 {.layui-form-item li span{font-size: 0.8em;width: 20%;}}
+.layui-table td{ background-color: #eae8e8;color: #3465cb;text-align: center;font-size: 1.2em;}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color:#3465cb;}

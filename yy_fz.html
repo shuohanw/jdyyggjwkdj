@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>分组</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/yy_fz.css">
+</head>
+<body>
+<div class="page">
+    <iframe frameboder="0" scrolling="no" width="100%" height="240" src="header.html"></iframe>
+    <iframe frameboder="0" scrolling="no" width="100%" height="800" src="left.html"></iframe>
+    <div class="right_ce">
+        <div class="right_container">
+            <ul>
+               <li>
+                   <div class="instructions">
+                       <select name="interest" lay-filter="aihao">
+                           <option value="" selected=""></option>
+                           <option value="0">刘医生</option>
+                       </select>
+                       <button type="button" class="increase">编 辑</button>
+                       <button type="button" class="delete">保 存</button>
+                   </div>
+               </li>
+            </ul>
+         <!--   <table class="layui-table" lay-data="{width: 1100, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
+                <thead>
+                <tr>
+                    <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+                    <th lay-data="{field:'id',  fixed: true}">序号</th>
+                    <th lay-data="{field:'username',}">姓名</th>
+                    <th lay-data="{field:'sex',  }">年龄</th>
+                    <th lay-data="{field:'city', }">职位</th>
+                    <th lay-data="{field:'sign', }">联系方式</th>
+                    <th lay-data="{field:'experience',}">所属主管医生</th>
+                </tr>
+                </thead>
+            </table>-->
+
+            <table class="layui-hide" id="test"></table>
+        </div>
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            ,url:'/demo/table/user/'
+            ,width: 1000
+            ,height: 332
+            ,cols: [[
+                {type:'checkbox', fixed: 'left' }
+                ,{field:'id',width:120,  title: '序号',  fixed: 'left'}
+                ,{field:'username',width:120, title: '姓名'}
+                ,{field:'sex', width:120, title: '年龄', }
+                ,{field:'city', width:120, title: '职位'}
+                ,{field:'sign', width:250, title: '联系方式'}
+                ,{field:'experience', width:220, title: '所属主管医生', }
+            ]]
+            ,page: true
+        });
+    });
+
+
+    layui.use('table', function(){
+        var table = layui.table;
+        //监听表格复选框选择
+        table.on('checkbox(demo)', function(obj){
+            console.log(obj)
+        });
+        //监听工具条
+        table.on('tool(demo)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'detail'){
+                layer.msg('ID：'+ data.id + ' 的查看操作');
+            } else if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+                layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            }
+        });
+
+        var $ = layui.$, active = {
+            getCheckData: function(){ //获取选中数据
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+            }
+            ,getCheckLength: function(){ //获取选中数目
+                var checkStatus = table.checkStatus('idTest')
+                    ,data = checkStatus.data;
+                layer.msg('选中了：'+ data.length + ' 个');
+            }
+            ,isAll: function(){ //验证是否全选
+                var checkStatus = table.checkStatus('idTest');
+                layer.msg(checkStatus.isAll ? '全选': '未全选')
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>病员管理</title>
+    <title>调查查询</title>
     <link rel="stylesheet" href="./layui/css/layui.css" media="all">
     <link rel="stylesheet" href="./font/iconfont.css">
     <link rel="stylesheet" href="./css/patient_management.css">
@@ -17,41 +17,32 @@
             <div class="layui-form-item">
                 <ul>
                     <li>
-                     <span> 姓名：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input" />
+                        <span> 姓名：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input" />
                     </li>
                     <li>
                         <span>性别：</span><input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
                     </li>
                     <li>
-                      <span>主管医生：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                        <span>主管医生：</span> <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
                     </li>
-                    <li>
-                        <span>病历号：</span><input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
-                    </li>
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">查 询</button>
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">查 询</button>
                 </ul>
             </div>
         </form>
-        <div class="delete">
-            <i class='iconfont icon-shanchu' ></i><span>批量删除</span>
-        </div>
         <table class="layui-table" lay-data="{width: 1350, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
             <thead>
             <tr>
-            <tr>
-                <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
-                <th lay-data="{field:'id',width:117,}">序号</th>
-                <th lay-data="{field:'username',width:117, sort: true}">姓名</th>
-                <th lay-data="{field:'sex',width:118 }">性别</th>
-                <th lay-data="{field:'city',width:118 }">年龄</th>
-                <th lay-data="{field:'sign',width:118}">床号</th>
-                <th lay-data="{field:'experience',width:118}">病例号</th>
-                <th lay-data="{field:'experience',width:118   sort: true}">住院日期</th>
-                <th lay-data="{field:'classify',width:118 }">诊断</th>
-                <th lay-data="{field:'wealth',width:118, sort: true}">手术日期</th>
-                <th lay-data="{field:'score',width:118,  sort: true,}">主管医生</th>
-                <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"> 操作 </th>
-            </tr>
+                <th lay-data="{field:'id',width:122, fixed: true,fixed: 'left'}">序号</th>
+                <th lay-data="{field:'username',width:122}">姓名</th>
+                <th lay-data="{field:'sex',width:122  }">性别</th>
+                <th lay-data="{field:'city',width:122 }">年龄</th>
+                <th lay-data="{field:'sign',width:122 }">联系方式</th>
+                <th lay-data="{field:'experience',width:122}">屈曲</th>
+                <th lay-data="{field:'experience', width:122,  sort: true}">外晨</th>
+                <th lay-data="{field:'classify',width:122 }">内收</th>
+                <th lay-data="{field:'wealth',width:122}">手术日期</th>
+                <th lay-data="{field:'score',width:122}">主管医生</th>
+                <th lay-data="{fixed: 'right', align:'center',width:122, toolbar: '#barDemo'}"> 操作 </th>
             </tr>
             </thead>
         </table>

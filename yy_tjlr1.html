@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>统计录入</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/yy_tjlr1.css">
+</head>
+<body>
+<div class="page">
+    <iframe frameboder="0" scrolling="no" width="100%" height="240" src="header.html"></iframe>
+    <iframe frameboder="0" scrolling="no" width="100%" height="800" src="left.html"></iframe>
+    <div class="right_ce">
+        <div class="right_container">
+            <ui>
+                <li class="yili">
+                    <span class="yispan">值班医生 ： </span>
+                    <select name="interest" lay-filter="aihao">
+                        <option value="" selected=""></option>
+                        <option value="0">刘医生</option>
+
+                    </select>
+                </li>
+                <li class="yili">
+                    <span class="yispan">值班日期： </span>
+                    <input type="text"  id="test17"  class="yiinput">
+                </li>
+            </ui>
+            <div class="biaoge">
+                <ul>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">原住院人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">出院人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">入院（转）入人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">手术人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">死亡人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">现有住院人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <li class="biaoge_li">
+                        <span class="biaoge_span">重病人数</span>
+                        <input type="text"  class="biaoge_input" >
+                    </li>
+                    <button type="button">保 存</button>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#test17'
+            ,calendar: true
+        });
+    });
+</script>
+</body>
+</html>
